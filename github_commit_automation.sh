@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Start date
-start_date="2023-01-02"
+start_date="2021-01-02"
 current_date=$start_date
 last_date=$start_date
 
