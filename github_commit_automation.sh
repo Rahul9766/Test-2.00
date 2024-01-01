@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Start date
-start_date="2021-01-02"
+start_date="2024-01-01"
 current_date=$start_date
 last_date=$start_date
 
@@ -14,8 +14,12 @@ tasks=(
     "echo 'Task 5: Writing a random number' > ${current_date}_random.txt; echo \$RANDOM >> ${current_date}_random.txt"
 )
 
-# Loop for 250 days
-for (( i=1; i<=729; i++ )); do
+# Calculate number of days between Jan 1 and April 1 (91 days in a non-leap year)
+# 2024 is a leap year, so it's 92 days
+num_days=92
+
+# Loop until April 1
+for (( i=1; i<=num_days; i++ )); do
     # Determine if it's a commit day or not (60% chance of a commit)
     commit_day=$((RANDOM % 10))
     if [ $commit_day -lt 3 ]; then
